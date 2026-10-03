@@ -335,6 +335,118 @@ body {
     color: var(--forest);
 }
 
+.formulario-voluntario {
+    max-width: 760px;
+    margin: 28px 0;
+    padding: 24px;
+    border: 1px solid rgba(21, 63, 55, 0.18);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.46);
+}
+
+.campos-voluntario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 18px;
+}
+
+.campo-voluntario {
+    display: grid;
+    align-content: start;
+    gap: 7px;
+    min-width: 0;
+}
+
+.campo-amplo {
+    grid-column: 1 / -1;
+}
+
+.campo-voluntario label,
+.opcoes-voluntario legend {
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.campo-voluntario input,
+.campo-voluntario select,
+.campo-voluntario textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid rgba(21, 63, 55, 0.3);
+    border-radius: 4px;
+    background: #fffefa;
+    color: var(--ink);
+    font: inherit;
+}
+
+.campo-voluntario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.campo-voluntario input:focus-visible,
+.campo-voluntario select:focus-visible,
+.campo-voluntario textarea:focus-visible,
+.opcoes-voluntario input:focus-visible,
+.botao-voluntario:focus-visible {
+    outline: 3px solid var(--sun);
+    outline-offset: 3px;
+}
+
+.opcoes-voluntario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+    margin: 0;
+    padding: 16px;
+    border: 1px solid rgba(21, 63, 55, 0.18);
+    border-radius: 4px;
+}
+
+.opcoes-voluntario legend {
+    padding: 0 6px;
+}
+
+.opcoes-voluntario label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink);
+    font-size: 14px;
+}
+
+.opcoes-voluntario input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--forest);
+}
+
+.aviso-formulario,
+.retorno-formulario {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.botao-voluntario {
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid var(--forest);
+    border-radius: 4px;
+    background: var(--forest);
+    color: var(--paper);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.botao-voluntario:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 .arvore-scroll {
     width: min(100% - 64px, 1120px);
     margin: 24px auto 10px;
