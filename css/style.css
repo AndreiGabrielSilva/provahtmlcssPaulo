@@ -232,6 +232,109 @@ body {
     line-height: 1.7;
 }
 
+.hospedagem-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    align-items: stretch;
+    gap: 18px;
+    margin: 32px 0;
+}
+
+.hospedagem-opcao {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border: 1px solid rgba(21, 63, 55, 0.18);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.46);
+}
+
+.hospedagem-recomendada {
+    border-color: var(--forest);
+    background: rgba(191, 212, 140, 0.2);
+}
+
+.hospedagem-tipo {
+    margin: 0 0 10px;
+    color: #96703f;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hospedagem-opcao h3,
+.hospedagem-recomendacao h3 {
+    margin: 0 0 12px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.hospedagem-resumo,
+.hospedagem-nota,
+.hospedagem-recomendacao p,
+.hospedagem-rodape,
+.hospedagem-fontes {
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.hospedagem-opcao dl {
+    margin: 12px 0;
+}
+
+.hospedagem-opcao dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(21, 63, 55, 0.12);
+}
+
+.hospedagem-opcao dt {
+    color: var(--muted);
+}
+
+.hospedagem-opcao dd {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 700;
+    text-align: right;
+}
+
+.hospedagem-opcao a {
+    margin-top: auto;
+    color: var(--forest);
+    font-weight: 700;
+}
+
+.hospedagem-recomendacao {
+    margin: 36px 0 24px;
+    padding: 28px;
+    border-left: 4px solid var(--sun);
+    background: rgba(255, 255, 255, 0.48);
+}
+
+.hospedagem-recomendacao .subtitulo {
+    color: #96703f;
+}
+
+.hospedagem-recomendacao p,
+.hospedagem-rodape,
+.hospedagem-fontes {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.hospedagem-rodape {
+    max-width: 850px;
+}
+
+.hospedagem-fontes a {
+    color: var(--forest);
+}
+
 .arvore-scroll {
     width: min(100% - 64px, 1120px);
     margin: 24px auto 10px;
@@ -1038,7 +1141,7 @@ footer{
 }
 
 .imagem-projeto-um {
-    width: 500px;
+    width: min(500px, 100%);
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
